@@ -1,5 +1,5 @@
 const int N = 300010;
-struct SA{
+struct SA{ // 將字串的所有後綴依字典序排序後的數組
 #define REP(i,n) for ( int i=0; i<int(n); i++ )
 #define REP1(i,a,b) for ( int i=(a); i<=int(b); i++ )
   bool _t[N*2];
@@ -54,6 +54,8 @@ void suffix_array(int* ip, int len) {
   for (int i=0; i<len; i++) {
     H[i] = sa.hei[i + 1];
     SA[i] = sa._sa[i + 1];
+    // SA[i] = 第i小的後綴是第幾個字元開始的後綴字串
+    // H[i] = lcp(s(sa[i]: ), s(sa[i - 1]: ))
   }
   // resulting height, sa array \in [0,len)
 }

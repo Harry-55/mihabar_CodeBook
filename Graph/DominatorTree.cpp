@@ -1,5 +1,5 @@
-//¤ä°tÂI
-//³Ì«á idom[u] ¬°ÂI u ªº¤ä°tÂI
+//æ”¯é…é»
+//æœ€å¾Œ idom[u] ç‚ºé» u çš„æ”¯é…é»
 struct DominatorTree{ // O(N)
 #define REP(i,s,e) for(int i=(s);i<=(e);i++)
 #define REPD(i,s,e) for(int i=(s);i>=(e);i--)
@@ -7,7 +7,7 @@ struct DominatorTree{ // O(N)
   vector< int > g[ MAXN ] , pred[ MAXN ];
   vector< int > cov[ MAXN ];
   int dfn[ MAXN ] , nfd[ MAXN ] , ts;
-  int par[ MAXN ]; //idom[u] s¨ìuªº³Ì«á¤@­Ó¥²¸gÂI
+  int par[ MAXN ]; //idom[u] såˆ°uçš„æœ€å¾Œä¸€å€‹å¿…ç¶“é»
   int sdom[ MAXN ] , idom[ MAXN ];
   int mom[ MAXN ] , mn[ MAXN ];
   inline bool cmp( int u , int v )

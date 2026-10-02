@@ -18,7 +18,7 @@ struct BIT{
     int query(int x) {return _query(x + 1);}
     int query(int l, int r) {return (query(r) - query(l - 1));}
 };
-//·f°t¦r¤¸­×§ï + Hash®Éªº¾Ş§@
+//æ­é…å­—å…ƒä¿®æ”¹ + Hashæ™‚çš„æ“ä½œ
 void update(int pos, int ch){
     BIT.update(pos, (ch - s[pos]) * p[pos] % MOD);
     revBIT.update(n-pos+1, (ch-s[pos]) * p[n-pos+1] % MOD);

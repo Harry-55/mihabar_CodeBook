@@ -1,7 +1,7 @@
 struct trie{
-    trie *nxt[26];//01trie§ï2
-    int cnt; //¬ö¿ý¦³¦h¤Ö­Ó¦r¦ê¥H¦¹¸`ÂIµ²§À
-    int sz;  //¦³¦h¤Ö¦r¦êªº«eºó¥]¬A¦¹¸`ÂI
+    trie *nxt[26];//01trieæ”¹2
+    int cnt; //ç´€éŒ„æœ‰å¤šå°‘å€‹å­—ä¸²ä»¥æ­¤ç¯€é»žçµå°¾
+    int sz;  //æœ‰å¤šå°‘å­—ä¸²çš„å‰ç¶´åŒ…æ‹¬æ­¤ç¯€é»ž
     trie():cnt(0),sz(0){
         memset(nxt,0,sizeof(nxt));
     }
@@ -9,7 +9,7 @@ struct trie{
 trie *root = new trie();
  	void insert(string& s){
     trie *now = root;
-    for(auto i:s){//01trie§ï°ª¦ì¤¸©¹¤U
+    for(auto i:s){//01trieæ”¹é«˜ä½å…ƒå¾€ä¸‹
         now->sz++;
         if(now->nxt[i-'a'] == NULL){
             now->nxt[i-'a'] = new trie();

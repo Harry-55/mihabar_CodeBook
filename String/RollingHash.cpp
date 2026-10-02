@@ -26,4 +26,4 @@ struct RollingHash{
         }
         return ret;
     }
-}Hash;£w
+}Hash;

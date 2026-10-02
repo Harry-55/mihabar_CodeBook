@@ -41,5 +41,5 @@ struct BccVertex {
     return res;
   }
 }graph;
-//vector size = 2ªº¬°¾ô
-//vector size > 2ªº¬°ÂIÂù³s³q¤À¶q
+//vector size = 2çš„ç‚ºæ©‹
+//vector size > 2çš„ç‚ºé»žé›™é€£é€šåˆ†é‡

@@ -2,7 +2,7 @@ struct Cir {
     Pt o;
     ld r; 
 };
-bool disjunct(const Cir &a, const Cir &b) { //  ¤À¶} || ¥~¤Á -> 1
+bool disjunct(const Cir &a, const Cir &b) { //  åˆ†é–‹ || å¤–åˆ‡ -> 1
     return sgn(abs(a.o - b.o) - a.r - b.r) >= 0; 
 }
 bool contain(const Cir &a, const Cir &b) {

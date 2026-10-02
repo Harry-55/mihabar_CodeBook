@@ -38,7 +38,7 @@ Pt rotate(Pt u, ld a) {
 }
 istream &operator>>(istream &s, Pt &a) { return s >> a.x >> a.y; }
 ostream &operator<<(ostream &s, Pt &a) { return s << "(" << a.x << ", " << a.y << ")";} 
-bool collinearity(Pt a, Pt b, Pt c) {  // ¤TÂI¦@½u
+bool collinearity(Pt a, Pt b, Pt c) {  // ä¸‰é»žå…±ç·š
     return ((b - a) ^ (c - a)) == 0;
 }
 

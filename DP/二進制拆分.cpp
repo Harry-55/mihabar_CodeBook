@@ -1,8 +1,8 @@
-//¥Ø«eª««~³Ì¦h®³ k ­Ó
+//ç›®å‰ç‰©å“æœ€å¤šæ‹¿ k å€‹
 int s = 0;
-vector<pair<int,int>> A;//A¬OÀx¦s©Ò¦³®¹
-for(int r = 1; r * 2 <= k; r *= 2){//TLEªº¸Ü¥ıºâk³Ì¤j®³´X­Ó
+vector<pair<int,int>> A;//Aæ˜¯å„²å­˜æ‰€æœ‰æ†
+for(int r = 1; r * 2 <= k; r *= 2){//TLEçš„è©±å…ˆç®—kæœ€å¤§æ‹¿å¹¾å€‹
     s += r;
-    A.push_back({r*c[i],r*v[i]});//r­Ó¤@¸i
+    A.push_back({r*c[i],r*v[i]});//rå€‹ä¸€ç¶‘
 }
-A.push_back({(k-s)*c[i],(k-s)*v[i]});//³Ì«á¤@®¹
+A.push_back({(k-s)*c[i],(k-s)*v[i]});//æœ€å¾Œä¸€æ†

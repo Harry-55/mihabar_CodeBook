@@ -1,5 +1,5 @@
 struct Scc{
-//bln:¦b­ş­Ó¤À¶q E­ì¹Ï
+//bln:åœ¨å“ªå€‹åˆ†é‡ EåŸåœ–
   int n, nScc, vst[MXN], bln[MXN];
   vector<int> E[MXN], rE[MXN], vec;
   void init(int _n){

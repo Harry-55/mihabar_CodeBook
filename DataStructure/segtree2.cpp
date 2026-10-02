@@ -1,9 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-#define int long long
-#define pii pair<int ,int>
-#define Harry55 ios::sync_with_stdio(0),cin.tie(0);
-
 struct seg_tree{
     #define cl(x) (x << 1)
     #define cr(x) (x << 1) | 1
@@ -22,7 +16,6 @@ struct seg_tree{
         push(cr(id), mid + 1, r);
         seg[id] = seg[cl(id)] + seg[cr(id)];
     }
-    
     void push(int id, int l, int r){
         if(tag[id]) {
             seg[id] += tag[id] * (r - l + 1);
@@ -33,7 +26,6 @@ struct seg_tree{
             tag[id] = 0;
         }
     }
-    
     void build(int id, int l, int r){
         if(l == r){
             seg[id] = arr[l];

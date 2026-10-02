@@ -12,7 +12,7 @@ struct DSU {
         f[x] = find(f[x]);
         return f[x];
     }
-    void merge(int x, int y) {
+    int merge(int x, int y) {
         x = find(x), y = find(y);
         if (x == y) return 0;
         if (sz[x] < sz[y])
@@ -20,6 +20,7 @@ struct DSU {
         sz[x] += sz[y];
         f[y] = x;
         cnt--;
+        return 1;
     }
     bool same(int a, int b) { return (find(a) == find(b)); }
     int group() {return cnt;}

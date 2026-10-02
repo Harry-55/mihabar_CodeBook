@@ -5,7 +5,7 @@ vector<Pt> Hull(vector<Pt> P) {
     vector<Pt> stk;
     for (auto p : P) {
         auto it = stk.rbegin();
-        //¤£¥i¦@½u¡A§ï < 0
+        //ä¸å¯å…±ç·šï¼Œæ”¹ < 0
         while (stk.rend() - it >= 2 and \
             ori(*next(it), *it, p) <= 0 and \
             (*next(it) < *it) == (*it < p)) {

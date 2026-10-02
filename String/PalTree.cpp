@@ -1,9 +1,9 @@
-// state[i]¥Hi¬°µ²§Àªº³Ìªø¦^¤å½s¸¹
-// len[s]¬O¹ïÀ³ªº¦^¤åªø«×
-// num[s]¬O¦³´X­Ó¦^¤å«áºó
-// cnt[s]¬O³o­Ó¦^¤å¤l¦r¦ê¦b¾ã­Ó¦r¦ê¤¤ªº¥X²{¦¸¼Æ
-// fail[s]¬O¥Lªø«×¦¸ªøªº¦^¤å«áºó¡Aabaªºfail¬Oa
-// fac[i]«ei­Ó¦r¤¸¤Á¦¨³Ì¤Ö¦^¤å¬q©Ò»İªº¬q¼Æ
+// state[i]ä»¥iç‚ºçµå°¾çš„æœ€é•·å›æ–‡ç·¨è™Ÿ
+// len[s]æ˜¯å°æ‡‰çš„å›æ–‡é•·åº¦
+// num[s]æ˜¯æœ‰å¹¾å€‹å›æ–‡å¾Œç¶´
+// cnt[s]æ˜¯é€™å€‹å›æ–‡å­å­—ä¸²åœ¨æ•´å€‹å­—ä¸²ä¸­çš„å‡ºç¾æ¬¡æ•¸
+// fail[s]æ˜¯ä»–é•·åº¦æ¬¡é•·çš„å›æ–‡å¾Œç¶´ï¼Œabaçš„failæ˜¯a
+// fac[i]å‰iå€‹å­—å…ƒåˆ‡æˆæœ€å°‘å›æ–‡æ®µæ‰€éœ€çš„æ®µæ•¸
 const int MXN = 1000010;
 struct PalT{
   int nxt[MXN][26],fail[MXN],len[MXN]; 
@@ -21,13 +21,13 @@ struct PalT{
     while(s[n-len[x]-1]!=s[n]) x=fail[x];
     return x;
   }
-  int getmin(int v){// ¥Î¨ìfac¦b§Û
+  int getmin(int v){// ç”¨åˆ°facåœ¨æŠ„
   	dp[v]=fac[n-len[sfail[v]]-diff[v]];
   	if(diff[v]==diff[fail[v]])
         dp[v]=min(dp[v],dp[fail[v]]);
     return dp[v]+1;
   }
-  int push(){// ¥Î¨ìfac¦b§Û
+  int push(){// ç”¨åˆ°facåœ¨æŠ„
     int c=s[n]-'a',np=getfail(lst);
     if(!(lst=nxt[np][c])){
       lst=newNode(len[np]+2,nxt[getfail(fail[np])][c]);

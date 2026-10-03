@@ -5,7 +5,6 @@
 // 2, 325, 9375, 28178, 450775, 9780504, 1795265022
 // Make sure testing integer is in range [2, n−2] if
 // you want to use magic.
-
 typedef long long LL;
 LL mul(LL a, LL b, LL m) { return (__int128)a * b % m; }
 LL mypow(LL a, LL e, LL m) {

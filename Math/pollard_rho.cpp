@@ -1,5 +1,4 @@
 typedef long long LL;
-
 LL mul(LL a, LL b, LL m) { return (__int128)a * b % m; }
 LL add(LL a, LL b, LL m) { return ((__int128)a + b) % m; }
 // with mypow / witness / miller_rabin
@@ -11,6 +10,5 @@ LL pollard_rho(LL n) {
         if ((q = mul(p, abs(x - y), n))) p = q;
         x = f(x, c, n); y = f(f(y, c, n), c, n);
     }
-    return __gcd(p, n);
-}
+    return __gcd(p, n);}
 

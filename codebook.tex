@@ -50,77 +50,78 @@
 
 
 \setmainfont [				%主要字型
-    Path = .fonts/ttf/,
-    UprightFont = *-Regular,
-    BoldFont = *-Bold,
-    ItalicFont = *-Italic
-  ] {Consolas}
+Path = .fonts/ttf/,
+UprightFont = *-Regular,
+BoldFont = *-Bold,
+ItalicFont = *-Italic
+] {Consolas}
 
 \setmonofont [        
     Path = .fonts/ttf/,
     UprightFont = *-Regular
-  ] {Monaco}
-
-\setCJKmainfont[
-  Path = .fonts/ttf/,        % 你放字型檔的資料夾（相對於主 .tex 檔案）
-  Extension = .ttf,
-  UprightFont = *-Regular,
-  BoldFont = *-Bold,
-]{NotoSansTC}
-
-\XeTeXlinebreaklocale "zh"						%中文自動換行
-\XeTeXlinebreakskip = 0pt plus 1pt				%設定段落之間的距離
-\setcounter{secnumdepth}{3}						%目錄顯示第三層
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\makeatletter
-\lst@CCPutMacro\lst@ProcessOther {"2D}{\lst@ttfamily{-{}}{-{}}}
-\@empty\z@\@empty
-\makeatother
-\lstset{											% Code顯示
-language=C++,										% the language of the code
-basicstyle=\footnotesize\ttfamily, 						% the size of the fonts that are used for the code
-%numbers=left,										% where to put the line-numbers
-numberstyle=\footnotesize,						% the size of the fonts that are used for the line-numbers
-stepnumber=1,										% the step between two line-numbers. If it's 1, each line  will be numbered
-numbersep=5pt,										% how far the line-numbers are from the code
-backgroundcolor=\color{white},					% choose the background color. You must add \usepackage{color}
-showspaces=false,									% show spaces adding particular underscores
-showstringspaces=false,							% underline spaces within strings
-showtabs=false,									% show tabs within strings adding particular underscores
-frame=false,											% adds a frame around the code
-tabsize=2,											% sets default tabsize to 2 spaces
-captionpos=b,										% sets the caption-position to bottom
-breaklines=true,									% sets automatic line breaking
-breakatwhitespace=false,							% sets if automatic breaks should only happen at whitespace
-escapeinside={\%*}{*)},							% if you want to add a comment within your code
-morekeywords={*},									% if you want to add more keywords to the set
-keywordstyle=\bfseries\color{Blue1},
-commentstyle=\itshape\color{Red4},
-stringstyle=\itshape\color{Green4},
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{document}
-\pagestyle{fancy}
-\fancyfoot{}
-%\fancyfoot[R]{\includegraphics[width=20pt]{ironwood.jpg}}
-\fancyhead[L]{NTOU AsdHater}
-\fancyhead[R]{\thepage}
-\renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\contentsname}{Contents} 
-
-\newcommand{\includetex}[2]{
-  \subsection{#1}
-  \input{#2}
-  \vspace{-1.2em}
-}
-\scriptsize
-\tableofcontents
-
-% \newpage
-%sectionstart  % ===== 以下依分類匯入各程式碼檔案 =====
+    ] {Monaco}
+    
+    \setCJKmainfont[
+        Path = .fonts/ttf/,        % 你放字型檔的資料夾（相對於主 .tex 檔案）
+        Extension = .ttf,
+        UprightFont = *-Regular,
+        BoldFont = *-Bold,
+        ]{NotoSansTC}
+        
+        \XeTeXlinebreaklocale "zh"						%中文自動換行
+        \XeTeXlinebreakskip = 0pt plus 1pt				%設定段落之間的距離
+        \setcounter{secnumdepth}{3}						%目錄顯示第三層
+        
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        \makeatletter
+        \lst@CCPutMacro\lst@ProcessOther {"2D}{\lst@ttfamily{-{}}{-{}}}
+        \@empty\z@\@empty
+        \makeatother
+        \lstset{											% Code顯示
+        language=C++,										% the language of the code
+        basicstyle=\footnotesize\ttfamily, 						% the size of the fonts that are used for the code
+        %numbers=left,										% where to put the line-numbers
+        numberstyle=\footnotesize,						% the size of the fonts that are used for the line-numbers
+        stepnumber=1,										% the step between two line-numbers. If it's 1, each line  will be numbered
+        numbersep=5pt,										% how far the line-numbers are from the code
+        backgroundcolor=\color{white},					% choose the background color. You must add \usepackage{color}
+        showspaces=false,									% show spaces adding particular underscores
+        showstringspaces=false,							% underline spaces within strings
+        showtabs=false,									% show tabs within strings adding particular underscores
+        frame=false,											% adds a frame around the code
+        tabsize=2,											% sets default tabsize to 2 spaces
+        captionpos=b,										% sets the caption-position to bottom
+        breaklines=true,									% sets automatic line breaking
+        breakatwhitespace=false,							% sets if automatic breaks should only happen at whitespace
+        escapeinside={\%*}{*)},							% if you want to add a comment within your code
+        morekeywords={*},									% if you want to add more keywords to the set
+        keywordstyle=\bfseries\color{Blue1},
+        commentstyle=\itshape\color{Red4},
+        stringstyle=\itshape\color{Green4},
+        }
+        
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        
+        % \usepackage{verbatim}
+        \begin{document}
+        \pagestyle{fancy}
+        \fancyfoot{}
+        %\fancyfoot[R]{\includegraphics[width=20pt]{ironwood.jpg}}
+        \fancyhead[L]{NTOU AsdHater}
+        \fancyhead[R]{\thepage}
+        \renewcommand{\headrulewidth}{0.4pt}
+        \renewcommand{\contentsname}{Contents} 
+        
+        \newcommand{\includetex}[2]{
+            \subsection{#1}
+            \input{#2}
+            \vspace{-1.2em}
+            }
+            \scriptsize
+            \tableofcontents
+            
+            % \newpage
+            %sectionstart  % ===== 以下依分類匯入各程式碼檔案 =====
 \section{Basic}
     \subsection{Default}
     \lstinputlisting{Basic/Default.cpp}
@@ -184,6 +185,21 @@ stringstyle=\itshape\color{Green4},
     \subsection{無向圖歐拉路徑}
     \lstinputlisting{Graph/NEulerPath.cpp}
 
+    \subsection{SPFA}
+    \lstinputlisting{Graph/spfa.cpp}
+
+    \subsection{01bfs}
+    \lstinputlisting{Graph/01bfs.cpp}
+
+    \subsection{dijk}
+    \lstinputlisting{Graph/dijk.cpp}
+
+    \subsection{flow/dinic}
+    \lstinputlisting{Graph/dinic_BCW.cpp}
+
+    \subsection{flow/ISFP}
+    \lstinputlisting{Graph/ISFP.cpp}
+
     \includetex{結論}{Graph/Conclusion.tex} % 圖論補充 / 結論整理
 
 \section{geometry}
@@ -225,6 +241,9 @@ stringstyle=\itshape\color{Green4},
 
     \subsection{倍增}
     \lstinputlisting{Tree/倍增.cpp}
+
+    \subsection{tree\_flaten}
+    \lstinputlisting{Tree/tree\_flaten.cpp}
 
 
 \section{DP}
@@ -269,6 +288,23 @@ stringstyle=\itshape\color{Green4},
     \subsection{josephus}
     \lstinputlisting{Math/josephus.cpp}
 
+    \subsection{josephus2}
+    \lstinputlisting{Math/josephus2.cpp}
+
+    \subsection{FFT}
+    \lstinputlisting{Math/FFT.cpp}
+
+    \subsection{Matrices\_fpow}
+    \lstinputlisting{Math/Matrices_fpow.cpp}
+
+    \subsection{Miller-Rabin}
+    \lstinputlisting{Math/Millar\_Rabin.cpp}
+
+    \subsection{pollard rho}
+    \lstinputlisting{Math/pollard\_rho.cpp}
+
+
+
 \section{String}
     \subsection{KMP}
     \lstinputlisting{String/KMP.cpp}
@@ -298,6 +334,18 @@ stringstyle=\itshape\color{Green4},
     \lstinputlisting{String/馬拉車.cpp}
     
 %sectionend  % ===== 程式碼主體結束 =====
+    \section{好東西}
+        \includetex{大悲咒}{大悲咒} % 附錄 / 其他補充
+        \vspace*{1cm}
+        \includetex{心經}{心經中日文} % 附錄 / 其他補充
+    \clearpage % 強制換到新的一頁
+
+% 使用 listings 匯入，設定基本的等寬字型，不顯示行號，不套用 C++ 高亮
+\lstinputlisting[
+    language={},         % 純文字，不使用程式語言高亮
+    numbers=none,        % 不顯示行號（否則 ASCII 畫會被行號破壞）
+    basicstyle=\ttfamily % 確保使用等寬字型，畫面才不會歪掉
+]{濕婆} 
 
 
 % 方格紙 (下方巨集)：列印時可附加數頁空白格紙供賽中手寫推導。
@@ -319,8 +367,8 @@ stringstyle=\itshape\color{Green4},
     \newpage
 }
 \onecolumn
-% \gridpage
-% \gridpage
+\gridpage
+\gridpage
 % \gridpage
 % \gridpage
 % \gridpage

@@ -6,6 +6,6 @@ int PtSide(Pt p, Line L) {
     // return sgn(ori(L.a, L.b, p) / abs(L.a - L.b));
     return sgn(ori(L.a, L.b, p));
 }
-bool PtOnSeg(Pt p, Line L) { // ¦@½u
+bool PtOnSeg(Pt p, Line L) { // å…±ç·š
     return PtSide(p, L) == 0 and sgn((p - L.a) * (p - L.b)) <= 0;
 }

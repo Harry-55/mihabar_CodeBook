@@ -62,5 +62,4 @@ struct seg_tree{
     }
     void upd(int sl, int sr, int v) {
         upd(1, 0, n - 1, sl, sr, v);
-    }
-};
+}};

@@ -4,3 +4,9 @@ codebook.aux
 codebook.log
 codebook.toc
 missfont.log
+mock.tex
+*.cpp
+*.aux
+*.log
+mock.pdf
+mock.toc

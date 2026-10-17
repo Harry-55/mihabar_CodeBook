@@ -50,5 +50,14 @@ struct Dinic {
             res += DFS(s, LLONG_MAX);
         }
         return res;
+    }//最大匹配 = 最小點覆蓋
+} flow; //最小邊覆蓋 = 最大獨立集
+/*
+index[u].push_back({v, flow.E[u].size()});
+for (int i = 1; i <= left_n; i++) { // 遍歷所有左邊的節點
+    for (pair<int, int> j : index[i]) {
+        if (flow.E[i][j.second - 1].f == 0)
+            cout << i << ' ' << j.first << '\n';
     }
-} flow;
+}
+*/

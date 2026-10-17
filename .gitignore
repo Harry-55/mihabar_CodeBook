@@ -5,7 +5,7 @@ codebook.log
 codebook.toc
 missfont.log
 mock.tex
-*.cpp
+a.cpp
 *.aux
 *.log
 mock.pdf

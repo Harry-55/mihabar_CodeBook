@@ -1,10 +1,10 @@
-struct seg_tree{
+struct seg_tree{ //0-base 左閉右閉
     #define cl(x) (x << 1)
     #define cr(x) (x << 1) | 1
-    vi seg, arr;
+    vector<int> seg, arr;
     int n;
-    void init(int _n, vi &_arr){
-        seg = vi(4 * _n + 5);
+    void init(int _n, vector<int> &_arr){
+        seg = vector<int>(4 * _n + 5);
         arr = _arr;
         n = _n;
         build(1, 0, _n - 1);
@@ -43,7 +43,7 @@ struct seg_tree{
         return res;
     }
     int find_first(int id, int l, int r, int sl, int sr, int k){//二分搜
-        if(l > sr || r < sl || seg[id] > k) return -1;
+        if(l > sr || r < sl || seg[id] < k) return -1;
         if(l == r) return l;
         int mid = (l + r) >> 1;
         int res = find_first(cl(id), l, mid, sl, sr, k);
@@ -58,5 +58,4 @@ struct seg_tree{
     }
     void upd(int x, int v){
         upd(1, 0, n - 1, x, v);
-    };
-};
+}};

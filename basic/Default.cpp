@@ -6,10 +6,10 @@ using namespace std;
 #define vi vector<int>
 #define ff first
 #define ss second
+#define pb push_back
 #define all(x) (x).begin(), (x).end()
 
 void solve(){
-    
 }
 
 signed main(){
@@ -17,5 +17,4 @@ signed main(){
     //cin >> t;
     while(t--){
         solve();
-    }
-}
+}}
